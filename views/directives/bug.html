@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-1">
+    <input type="checkbox"
+           ng-model="bugCtrl.bug.isResolved"
+           ng-change="bugCtrl.updateBug()"></input>
+  </div>
+
+  <div class="col-md-4">
+    <a ui-sref="details({bugId : bugCtrl.bug.id})">{{bugCtrl.bug.description}}</a>
+  </div>
+
+  <div class="col-md-1">
+    {{bugCtrl.bug.isResolved}}
+  </div>
+
+  <div class="col-md-6 text-right">
+    <button type="button" class="btn btn-success btn-xs"
+            ng-click="bugCtrl.bug.isResolved = true"
+            ng-disabled="bugCtrl.bug.isResolved">Mark Resolved</button>
+
+    <button type="button" class="btn btn-primary btn-xs"
+            ng-click="bugCtrl.bug.isResolved = false"
+            ng-disabled="!bugCtrl.bug.isResolved">Mark Open</button>
+
+    <button type="button" class="btn btn-danger btn-xs"
+            ng-click="bugCtrl.deleteBug()">Delete</button>
+  </div>
+</div>
+
+
+
+<!-- <div class="row" ng-repeat="bug in bugs">
+  <div class="col-md-1">
+    <input type="checkbox"
+           ng-model="bug.isResolved"
+           ng-change="updateBug(bug)"></input>
+  </div>
+
+  <div class="col-md-4">
+    <a ui-sref="details({bugId : bug.id})">{{bug.description}}</a>
+  </div>
+
+  <div class="col-md-1">
+    {{bug.isResolved}}
+  </div>
+
+  <div class="col-md-6 text-right">
+    <button type="button" class="btn btn-success btn-xs"
+            ng-click="bug.isResolved = true"
+            ng-disabled="bug.isResolved">Mark Resolved</button>
+
+    <button type="button" class="btn btn-primary btn-xs"
+            ng-click="bug.isResolved = false"
+            ng-disabled="!bug.isResolved">Mark Open</button>
+
+    <button type="button" class="btn btn-danger btn-xs"
+            ng-click="deleteBug(bug)">Delete</button>
+  </div>
+</div> -->

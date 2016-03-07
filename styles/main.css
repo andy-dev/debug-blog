@@ -1,0 +1,41 @@
+.form-group{
+  margin-top: 30px;
+}
+
+.av-bug-container {
+  margin: 1em 0;
+  border: 1px solid #777777;
+  padding: 1em;
+}
+
+.av-bug-container .av-bugs {
+  margin-bottom: 2em;
+}
+
+.av-bug-container .av-bugs:last-child {
+  margin-bottom: 0;
+}
+
+.av-bug-container .av-bugs av-bug {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  display: block;
+  padding: .25em .5em;
+  margin-bottom: .5em;
+}
+
+.av-bug-container .av-bugs av-bug em {
+  color: #aaa;
+  margin-left: 1em;
+}
+
+.av-bug-container .av-bugs av-bug:last-child {
+  margin-bottom: 0;
+}
+
+
+.footer {
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

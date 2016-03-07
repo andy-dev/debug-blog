@@ -1,0 +1,40 @@
+<!-- Add Bug Row -->
+<div class="row">
+ <div class="col-sm-12">
+  <form class="form-inline">
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" placeholder="bug description" ng-model="homeCtrl.newBug.description">
+      <button class="btn btn-primary" type="submit" ng-click="homeCtrl.addBug()">Add Bug</button>
+    </div>
+  </form>
+ </div>
+</div>
+
+<!-- Bugs -->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="av-bug-container">
+      <div class="av-bugs">
+        <h4>Open Bugs</h4>
+        <!-- Repeat Bugs -->
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4">Bug Description</a></div>
+          <div class="col-md-4">Resolved?</a></div>
+          <div class="col-md-3">Actions</div>
+        </div>
+        <div>
+          <av-bug bug="bug" ng-repeat="bug in homeCtrl.bugs"></av-bug>
+          <!-- <av-bug bugs="homeCtrl.bugs"></av-bug> -->
+        </div>
+        <!-- No Bugs Message -->
+        <div>
+          <em ng-if="!(homeCtrl.bugs).length">There are no open Bugs.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
