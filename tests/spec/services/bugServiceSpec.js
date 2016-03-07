@@ -40,6 +40,7 @@ describe('BugService service', function () {
         promise.then(function(result) {
             expect(result.data).toEqual(response);
         });
+
         $rootScope.$digest(); //to trigger the promise
     }));
 
@@ -62,6 +63,7 @@ describe('BugService service', function () {
       promise.then(function(result) {
           expect(result.data).toEqual(response);
       });
+
       $rootScope.$digest();
     }));
 
@@ -78,6 +80,7 @@ describe('BugService service', function () {
       promise.then(function(result) {
           expect(result.data).toEqual(response);
       });
+
       $rootScope.$digest();
     }));
 
@@ -94,6 +97,7 @@ describe('BugService service', function () {
       promise.then(function(result) {
           expect(result.data).toEqual(response);
       });
+
       $rootScope.$digest();
     }));
 
@@ -103,13 +107,14 @@ describe('BugService service', function () {
             'DELETE', 'http://localhost:3000/api/Bugs/1'
         ).respond(response);
 
-        var bugId = 1
+        var bugId = 1;
         var promise = BugService.deleteBug(bugId);
         $httpBackend.flush();
 
         promise.then(function(result) {
             expect(result.data).toEqual(response);
         });
+
         $rootScope.$digest();
     }));
 });

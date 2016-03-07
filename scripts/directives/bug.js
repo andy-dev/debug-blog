@@ -22,17 +22,18 @@
   BugFormController.$inject = ['$window', '$scope', 'BugService'];
 
   function BugFormController($window, $scope, BugService) {
-    var _this = this;
+    var vm = this;
 
-    _this.updateBug = function(){
-      BugService.updateBug(_this.bug);
+
+    vm.updateBug = function(){
+      BugService.updateBug(vm.bug);
     };
 
-    _this.deleteBug = function(){
+    vm.deleteBug = function(){
       if($window.confirm("Delete the Bug?!")){
-        return BugService.deleteBug(_this.bug.id)
+        return BugService.deleteBug(vm.bug.id)
           .then(function(){
-            $scope.$emit('bug.deleted', _this.bug);
+            $scope.$emit('bug.deleted', vm.bug);
           });
       }
     };
