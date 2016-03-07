@@ -112,5 +112,4 @@ describe('BugService service', function () {
         });
         $rootScope.$digest();
     }));
-
 });
