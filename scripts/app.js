@@ -32,6 +32,9 @@
         resolve: {
           bug: function($stateParams, BugService){
             return BugService.findBug($stateParams.bugId);
+          },
+          fixAttempts: function($stateParams, FixService){
+            return FixService.findAllFixAttempts($stateParams.bugId);
           }
         }
       });

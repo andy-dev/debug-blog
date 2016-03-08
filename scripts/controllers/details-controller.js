@@ -5,11 +5,12 @@
     .module('debug-blog-app')
     .controller('DetailsCtrl', DetailsCtrl);
 
-    DetailsCtrl.$inject = ['$scope', 'bug', '$state', '$window', 'FixService'];
+    DetailsCtrl.$inject = ['$scope', 'bug', 'fixAttempts','$state', '$window', 'FixService'];
 
-    function DetailsCtrl($scope, bug, $state, $window, FixService){
+    function DetailsCtrl($scope, bug, fixAttempts, $state, $window, FixService){
       var vm = this;
 
+      vm.fixAttempts = fixAttempts.data;
       vm.addFixAttempt = addFixAttempt;
       vm.bug = bug.data;
       vm.newFixAttempt = {
@@ -24,7 +25,8 @@
         .then(function(response){
           vm.newFixAttempt.code = null;
           vm.newFixAttempt.notes = null;
-          vm.newFixAttempt.source = null;
+          vm.newFixAttempt.sources = null;
+          vm.fixAttempts.push(response.data);
         })
       };
     }

@@ -12,17 +12,22 @@
 
       var service = {
         addFixAttempt :  addFixAttempt,
+        findAllFixAttempts: findAllFixAttempts
       };
 
       return service;
 
       function addFixAttempt(fixAttempt,bugId){
-        return $http.post(API_URL.concat('/api/fixattempts'), {
+        return $http.post(API_URL.concat('/api/Fixattempts'), {
           code: fixAttempt.code,
           notes: fixAttempt.notes,
-          source: fixAttempt.sources,
+          sources: fixAttempt.sources,
           bugId: bugId
         });
+      };
+
+      function findAllFixAttempts(bugId){
+        return $http.get(API_URL.concat('/api/Bugs/').concat(bugId).concat("/FixAttempt"));
       };
     };
 })();
