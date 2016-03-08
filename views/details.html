@@ -1,1 +1,24 @@
-<p>Hi from Details</p>
+<div class="container">
+  <div class="col-md-12">
+    <div class="form-area">
+        <form role="form"><br style="clear:both">
+          <h3 style="margin-bottom: 25px; text-align: center;">Bug Attempt</h3>
+
+          <div class="form-group">
+            <textarea class="form-control" type="textarea" id="message" placeholder="Code" rows="7" ng-model="detailsCtrl.newFixAttempt.code"></textarea>
+          </div>
+
+          <div class="form-group">
+             <textarea class="form-control" type="textarea" id="message" placeholder="Notes" rows="7" ng-model="detailsCtrl.newFixAttempt.notes"></textarea>
+          </div>
+
+          <div class="form-group">
+             <textarea class="form-control" type="textarea" id="message" placeholder="Source" rows="7" ng-model="detailsCtrl.newFixAttempt.source"></textarea>
+          </div>
+
+          <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" ng-click="detailsCtrl.addFixAttempt()">Submit Bug Attempt</button>
+      </form>
+    </div>
+  </div>
+</div>
+
