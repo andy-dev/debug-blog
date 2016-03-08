@@ -5,7 +5,6 @@
 
 //   var $controller, $scope, $window, bugs, BugService
 
-
 //   beforeEach(inject(function(_$controller_, _$scope_, _$window_, _bugs_, _BugService_){
 //     $controller = _$controller_;
 //     $scope =  _$scope_;
@@ -13,8 +12,5 @@
 //     bugs = _bugs_;
 //     BugService = _BugService_;
 //   }));
-
-
-
 
 // })

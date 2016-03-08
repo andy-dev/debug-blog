@@ -1,4 +1,4 @@
-'use strict';
+  //==================================NOTES===================================================
 
   // In the case of writing a spec for a model that makes remote server calls, it’s important to understand that you’re testing the logic in the model and not the results returned from the server or the ability of the $http service to do its job.
 
@@ -6,6 +6,9 @@
 
   // use $httpBackend to mock out specific server calls and then verify that Service did indeed hit our mock endpoints
 
+  //=====================================================================================
+
+'use strict';
 describe('BugService service', function () {
 
     beforeEach(module('debug-blog-app'));

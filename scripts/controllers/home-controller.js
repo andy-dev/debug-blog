@@ -1,8 +1,14 @@
+//======================================NOTES=====================================
+
 // Controllers should be lightweight and specific to the view they control.
 
 // Controllers are responsible for receiving data from services and processing it for display in the view, as well as communicating data back to services for logic processing
 
 // Controllers should have no knowledge of the view they control
+
+//===================================end notes==========================================
+
+
 (function() {
   'use strict';
 
