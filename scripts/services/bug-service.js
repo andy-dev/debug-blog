@@ -1,3 +1,4 @@
+// Services are a way to define functionality that’s common to the entire application.
 (function(){
   'use strict';
 
