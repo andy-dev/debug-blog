@@ -12,13 +12,19 @@
 
       vm.addFixAttempt = addFixAttempt;
       vm.bug = bug.data;
+      vm.newFixAttempt = {
+        code: null,
+        notes: null,
+        sources: null,
+        bugId: null
+      };
 
     function addFixAttempt(){
       FixService.addFixAttempt(vm.newFixAttempt, vm.bug.id)
         .then(function(response){
           vm.newFixAttempt.code = null;
           vm.newFixAttempt.notes = null;
-          vm.newFixAttempt.sources = null;
+          vm.newFixAttempt.source = null;
         })
       };
     }

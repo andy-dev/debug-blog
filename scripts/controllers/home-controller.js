@@ -22,7 +22,6 @@
     };
 
     function addBug(){
-      console.log(vm.newBug.description)
       BugService.addBug(vm.newBug.description)
         .then(function(response){
           vm.newBug.description = null;
