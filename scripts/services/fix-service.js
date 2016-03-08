@@ -11,18 +11,18 @@
       var API_URL = 'http://localhost:3000';
 
       var service = {
-        addFixAttempt :  addFixAttempt,
-        findAllFixAttempts: findAllFixAttempts
+        addFixAttempt      : addFixAttempt,
+        findAllFixAttempts : findAllFixAttempts
       };
 
       return service;
 
       function addFixAttempt(fixAttempt,bugId){
         return $http.post(API_URL.concat('/api/Fixattempts'), {
-          code: fixAttempt.code,
-          notes: fixAttempt.notes,
-          sources: fixAttempt.sources,
-          bugId: bugId
+          code    : fixAttempt.code,
+          notes   : fixAttempt.notes,
+          sources : fixAttempt.sources,
+          bugId   : bugId
         });
       };
 

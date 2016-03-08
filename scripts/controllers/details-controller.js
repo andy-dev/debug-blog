@@ -14,10 +14,10 @@
       vm.addFixAttempt = addFixAttempt;
       vm.bug = bug.data;
       vm.newFixAttempt = {
-        code: null,
-        notes: null,
-        sources: null,
-        bugId: null
+        code    : null,
+        notes   : null,
+        sources : null,
+        bugId   : null
       };
 
     function addFixAttempt(){
