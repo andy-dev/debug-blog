@@ -1,5 +1,5 @@
 angular.module('debug-blog-app')
-    directive('nagPrism', ['$compile', function($compile) {
+    .directive('prisim', ['$compile', function($compile) {
     return {
         restrict: 'A',
         transclude: true,

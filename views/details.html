@@ -35,19 +35,36 @@
 
 
 
-        <div class="row" ng-repeat="fix in detailsCtrl.fixAttempts">
-        <pre class="language-javascript"><code class="language-javascript" prism>
-          {{fix.code}}
-         </code></pre>
+     <div class="form-area" ng-repeat="fix in detailsCtrl.fixAttempts">
+       <h3 style="margin-bottom: 25px ">Fix Attempt </h3>
+
+        <div class="row" >
+          <p>Code Tried</p>
+          <pre class="language-javascript"><code class="language-javascript" prisim>
+             {{fix.code}}
+          </code></pre>
+          <!-- <prisim class="language-javascript"> {{fix.code}} </prisim> -->
         </div>
 
-      <!-- <p>notes: {{fix.notes}}</p> -->
-      <!-- <p>sources: {{fix.sources}}</p> -->
-    <!-- </div> -->
+        <div class="row">
+          <p>Notes Used</p>
+          <div class="fixForm">
+            <p>{{fix.notes}}<p>
+          </div>
+        </div>
 
-    <div>
-      <!-- <em ng-if="!(fixAttempts).length">There are no Fix attempts</em> -->
-    </div>
+        <div class="row">
+          <p>Resources Used</p>
+          <div class="fixForm">
+            <p>{{fix.sources}}<p>
+          </div>
+        </div>
+
+      </div>
+
+   <!--  <div>
+      <em ng-if="!(fixAttempts).length">There are no Fix attempts</em>
+    </div> -->
   </div>
 </div>
 
