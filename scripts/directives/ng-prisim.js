@@ -1,4 +1,4 @@
-//=======CODE PASTED FROM GITHUB FOR 3 PARTY PRISIM=========
+//=======CODE PASTED FROM GITHUB FOR  PRISIM=========
 
 angular.module('debug-blog-app')
     .directive('prisim', ['$compile', function($compile) {

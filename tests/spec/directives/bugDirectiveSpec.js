@@ -12,10 +12,11 @@ describe('avBug Directive', function () {
     beforeEach(inject(function($q, $compile, _$rootScope_, _BugService_) {
         $rootScope = _$rootScope_;
 
-        $scope = $rootScope.$new();
+        // $scope = $rootScope.$new();
         var directiveMarkup = angular.element("<av-bug></av-Bug>");
-        element = $compile(directiveMarkup)($scope);
-        bugCtrl = element.scope().bugCtrl;
+        element = $compile(directiveMarkup)($rootScope);
+        $rootScope.$digest();
+        bugCtrl = element.controller('BugFormController');
 
 
         BugService = _BugService_;
